@@ -41,11 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Body
-    uniqueID: 2291721267
+  - name: Background
+    uniqueID: 376472203
     locked: 0
-  - name: Head
-    uniqueID: 2464843697
+  - name: Hoody
+    uniqueID: 3984349067
+    locked: 0
+  - name: Foreground
+    uniqueID: 927643479
     locked: 0
   - name: UI
     uniqueID: 1001495165
