@@ -1,8 +1,14 @@
 # VetSim
-Fall 2018 cis642 vet sim project
-
-Matej Shanel (shanemat @ KSU)
-
-Ashley Morton (asmorton @ KSU)
-
-Jared Vincent (jmvincent @ KSU)
+ This projects aims to create a game for students of veterinary medicine school, which should help them study and prepare them for their future jobs. **Vetsim** aims primarily on mobile devices (*Android* at first) to be easily accessible to all students at any time.
+ 
+## Contributors
+ The base developer team contributing to this project is *KSU CIS JAM*, which was created for the purposes of class *CIS-642: Software Engineering Project (Fall 2018)* at Kansas State University (USA).
+ 
+### Current members
+ * [Jared Vincent](https://github.com/jaredvincent)
+ * [Ashley Morton](https://github.com/ashley23mo)
+ * [Matej Shanel](https://github.com/ksu-shanemat)
+ * [Payton Trosclair](https://github.com/Trosclair)
+ 
+## License
+ The **VetSim** project is being developed under the [*MIT*](https://choosealicense.com/licenses/mit/) license as required by the customers and KSU policy.
