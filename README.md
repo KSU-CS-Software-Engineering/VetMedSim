@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VetMedSim
  This projects aims to create a game for students of veterinary medicine school, which should help them study and prepare them for their future jobs. **VetMedSim** aims primarily on mobile devices (*Android* at first) to be easily accessible to all students at any time.
 
@@ -9,6 +10,7 @@
  * [Ashley Morton](https://github.com/ashley23mo)
  * [Matej Shanel](https://github.com/ksu-shanemat)
  * [Payton Trosclair](https://github.com/Trosclair)
+<<<<<<< HEAD
 
 ## License
  The **VetMedSim** project is being developed under the [*MIT*](https://choosealicense.com/licenses/mit/) license as required by the customers and KSU policy.
