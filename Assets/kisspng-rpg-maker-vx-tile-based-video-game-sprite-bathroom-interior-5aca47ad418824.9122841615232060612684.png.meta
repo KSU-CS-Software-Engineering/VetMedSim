@@ -1,0 +1,1570 @@
+fileFormatVersion: 2
+guid: 8d40c484a8d12a541b28e41698f7654a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_0
+    21300002: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_1
+    21300004: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_2
+    21300006: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_3
+    21300008: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_4
+    21300010: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_5
+    21300012: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_6
+    21300014: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_7
+    21300016: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_8
+    21300018: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_9
+    21300020: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_10
+    21300022: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_11
+    21300024: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_12
+    21300026: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_13
+    21300028: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_14
+    21300030: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_15
+    21300032: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_16
+    21300034: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_17
+    21300036: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_18
+    21300038: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_19
+    21300040: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_20
+    21300042: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_21
+    21300044: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_22
+    21300046: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_23
+    21300048: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_24
+    21300050: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_25
+    21300052: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_26
+    21300054: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_27
+    21300056: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_28
+    21300058: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_29
+    21300060: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_30
+    21300062: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_31
+    21300064: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_32
+    21300066: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_33
+    21300068: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_34
+    21300070: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_35
+    21300072: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_36
+    21300074: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_37
+    21300076: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_38
+    21300078: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_39
+    21300080: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_40
+    21300082: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_41
+    21300084: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_42
+    21300086: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_43
+    21300088: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_44
+    21300090: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_45
+    21300092: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_46
+    21300094: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_47
+    21300096: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_48
+    21300098: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_49
+    21300100: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_50
+    21300102: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_51
+    21300104: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_52
+    21300106: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_53
+    21300108: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_54
+    21300110: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_55
+    21300112: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_56
+    21300114: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_57
+    21300116: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_58
+    21300118: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_59
+    21300120: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_60
+    21300122: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_61
+    21300124: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_62
+    21300126: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_63
+    21300128: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_64
+    21300130: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_65
+    21300132: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_66
+    21300134: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_67
+    21300136: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_68
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 450
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6b6952318d4b748aa1c0b240a66212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 29
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b43bfc30dec0f48a25f15b39c29878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e75ad77fa8ed0a4f9742a5f6053a7d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 465
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fd25fc477e7c942933849b7bcdff3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 485
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cda4e729ad094c4a8b795931c79b2f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_5
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 482
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e467d6a6c1eb841852f0c4a0f2b0d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_6
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 482
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c05f4403d1dd53429f3bdadb2dc4d3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9f6064bdd3676459c655c9d43e5acd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_8
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 417
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c47fc71fabfda94b96100205474fd17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_9
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 448
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f427493abf23d56459679bad2726f05e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_10
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 417
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c11e0bd94161a84488979222663b24e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 425
+        width: 15
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd26b31bbebd014b8cd9fce914575ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_12
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 416
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca1a8e480a44fe4a865d9684d4c455d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_13
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 421
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d7ca2029e51924faed5209ce84cf48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 390
+        width: 128
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c1a03bcb56ddb47987a577417cdd81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 384
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e37780134dafd47bb8b7a2e8be3386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 385
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73a4882859da524f86062a57494d5fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 387
+        width: 51
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cf8b661cffc304ba641bd4f64b602d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_18
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 357
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eaa692f2ded7f04c9b78eecabdc5765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_19
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 353
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11365e23142c7b24185d15f5613e8772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 352
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0278d628e764b548a5b87147f19a3f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 355
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77328ede8b3243b42a37b9abb4fbf903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_22
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 358
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33efaf436fa905a468971606ab009ad7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 128
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d4578ba87f4834d8cac592b8c157f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_24
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 334
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103fc2106365d184db087a3ef5ffa557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 325
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3028c3be87889408b1d5dee6894feb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_26
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 322
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64105b80f5f751546a2cbf24475581ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 332
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f64c774be23c44409b4c914434e8444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_28
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 320
+        width: 63
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b55b72e00688c14485e57e05ba6d0a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_29
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 328
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c0e646432c4f94ca369a2dc7cd2422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_30
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6176a9cdd66144747a4952984b5e6e36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 278
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1145ea936bbace84196439c0e1964599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_32
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 260
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba8e2ce206f304499403413254714f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_33
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 289
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3e6a3d692c07a47a3ad30a780a39d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 166
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4afa0dc5485eb4ea31a7de886a89ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_35
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 239
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a3dc20135d41f42a39a0bdb1ac3bb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_36
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 197
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ea40e6d7744c248baeb8a0c56680a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf394c6fee9aab4d9324ca0e5dff59d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_38
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 189
+        width: 13
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57e1299879f02f4a9a7a4afd16921da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_39
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 218
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad7cb70e1e0204e88c1a3113d08cb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 164
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917e3d532796c3d4c96966e21ca49bfa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_41
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 164
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46eefa62a7c339a4294a7b215c1e6ac4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_42
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 198
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bd0c6f113f07b43b53da4abb331c8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_43
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 198
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1df8a97d73d9f4883df578dd89d809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_44
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 194
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2d8e4013e1898459f540325829128f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_45
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 158
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c38219fc833a6439b4c7d14ca68fbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 165
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bf0f048cf9a3b47a95b34e562da0e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_47
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616c07fc9e66f3d4d9e74c029711f338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_48
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 144
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c2a0a5cadc8544c92ac4e8b0ad1725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_49
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 129
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed65a002c931b1f45af6852a7b1588e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_50
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 96
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3119f916e9c40e4889da2e062da2bfc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_51
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bffb70725ea8143af3394e3d078296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_52
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 99
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c28ff186848fc489d5c7ea21bcbbb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_53
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 103
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015b26c6828804240973066e155bfec4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_54
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 106
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0526bebea40ba33468934084f7fc9e59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_55
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 113
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8225eff91e76fcb4ea9500d9ce64e22c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_56
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 75
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9215401741267364a9bedfc9549d49df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a94261dc122b245b7a373ddd77c625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_58
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 32
+        width: 62
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c353fd27efc0a744a856e2809d96630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_59
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 8
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df3607418f89d14e86d54e524d8fa66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_60
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 17
+        width: 23
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f142a80bb2ec114a891688e67ca110c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_61
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 36
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f2fc436c580ef408f73f8678b13c3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_62
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 34
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ab11eb1a57344438f4db5af17c3aac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_63
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 54
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3215bb0e0dec1489e4d99bbb36030c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_64
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 54
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4678099066da2741a3e33ebeec26e3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_65
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 45
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25f2458077eb3e4c874a972dfe3e4ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_66
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 16
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85173fa76d2228f4eaff3a188923e6b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_67
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 16
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc00225c04341ae4093db3db93a0809e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-rpg-maker-vx-tile-based-video-game-sprite-bathroom-interior-5aca47ad418824.9122841615232060612684_68
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 36
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b744243e95a26be4ea0602b06c1a38c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fcb9cfbae500b614d9a6aba04cc57bfe
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
