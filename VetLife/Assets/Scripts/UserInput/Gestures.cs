@@ -9,7 +9,8 @@ namespace Assets.Scripts.UserInput
 	/// </summary>
 	public enum GestureType
 	{
-		Tap
+		Tap,
+		Hold
 	}
 
 	/// <summary>
@@ -137,6 +138,25 @@ namespace Assets.Scripts.UserInput
 		public Tap( Vector2 origin, int tapCount ) : base( origin, GestureType.Tap )
 		{
 			TapCount = tapCount;
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents user (prolonged stationary) hold gesture
+	/// </summary>
+	public class Hold : SingleFingerGesture
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Constructs hold gesture
+		/// </summary>
+		/// <param name="origin">The <see cref="Vector2"/> containing coordinates of the place where this gesture started</param>
+		public Hold( Vector2 origin ) : base( origin, GestureType.Hold )
+		{
+			// intentionally left blank
 		}
 
 		#endregion
