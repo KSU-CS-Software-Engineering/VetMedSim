@@ -11,7 +11,8 @@ namespace Assets.Scripts.UserInput
 	{
 		Tap,
 		Hold,
-		Drag
+		Drag,
+		Pinch
 	}
 
 	/// <summary>
@@ -262,6 +263,87 @@ namespace Assets.Scripts.UserInput
 		{
 			OriginMain = originMain;
 			OriginSecondary = originSecondary;
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents user (figners moving apart from or towards each other) pinch gesture
+	/// </summary>
+	public class Pinch : DoubleFingerGesture
+	{
+		#region Properties
+
+		/// <summary>
+		/// Current coordinates of the main touch
+		/// </summary>
+		public Vector2 EndMain { get; private set; }
+
+		/// <summary>
+		/// Current coordinates of the secondary touch
+		/// </summary>
+		public Vector2 EndSecondary { get; private set; }
+
+		/// <summary>
+		/// Current distance in between fingers
+		/// </summary>
+		public float Magnitude => (EndMain - EndSecondary).magnitude;
+
+		/// <summary>
+		/// Change of finger distance from last frame
+		/// </summary>
+		public float DeltaMagnitude { get; private set; }
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs pinch gesture
+		/// </summary>
+		/// <param name="originMain">The <see cref="Vector2"/> containing coordinates of one of the places where this gesture started</param>
+		/// <param name="originSecondary">The <see cref="Vector2"/> containing coordinates of the other place where this gesture started</param>
+		public Pinch( Vector2 originMain, Vector2 originSecondary ) : base( originMain, originSecondary, GestureType.Pinch )
+		{
+			EndMain = OriginMain;
+			EndSecondary = OriginSecondary;
+
+			DeltaMagnitude = 0f;
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Updates the last known position of both fingers by moving to given coordinates
+		/// </summary>
+		/// <param name="endMain">New value of main finger coordinates</param>
+		/// <param name="endSecondary">New value of secondary finger coordinates</param>
+		public void MoveTo( Vector2 endMain, Vector2 endSecondary )
+		{
+			var previousMagnitude = Magnitude;
+
+			EndMain = endMain;
+			EndSecondary = endSecondary;
+
+			DeltaMagnitude = previousMagnitude - Magnitude;
+		}
+
+		/// <summary>
+		/// Updates the last known position of both fingers by moving by given delta coordinates
+		/// </summary>
+		/// <param name="deltaMain">Difference of coordinates that should be applied to last known position of main finger</param>
+		/// <param name="deltaSecondary">Difference of coordinates that should be applied to last known position of secondary finger</param>
+		public void MoveBy( Vector2 deltaMain, Vector2 deltaSecondary )
+		{
+			var previousMagnitude = Magnitude;
+
+			EndMain += deltaMain;
+			EndSecondary += deltaSecondary;
+
+			DeltaMagnitude = previousMagnitude - Magnitude;
 		}
 
 		#endregion
