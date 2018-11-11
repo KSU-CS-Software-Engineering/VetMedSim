@@ -228,4 +228,44 @@ namespace Assets.Scripts.UserInput
 	}
 
 	#endregion
+
+	#region Double-finger
+
+	/// <summary>
+	/// Represents user gestures that are made using two fingers
+	/// </summary>
+	public abstract class DoubleFingerGesture : Gesture
+	{
+		#region Properties
+
+		/// <summary>
+		/// The <see cref="Vector2"/> containing coordinates of one of the places where this gesture started
+		/// </summary>
+		public Vector2 OriginMain { get; }
+
+		/// <summary>
+		/// The <see cref="Vector2"/> containing coordinates of the other place where this gesture started
+		/// </summary>
+		public Vector2 OriginSecondary { get; }
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base double-finger gesture
+		/// </summary>
+		/// <param name="originMain">The <see cref="Vector2"/> containing coordinates of one of the places where this gesture started</param>
+		/// <param name="originSecondary">The <see cref="Vector2"/> containing coordinates of the other place where this gesture started</param>
+		/// <param name="type">Type of this user gesture</param>
+		protected DoubleFingerGesture( Vector2 originMain, Vector2 originSecondary, GestureType type ) : base( type )
+		{
+			OriginMain = originMain;
+			OriginSecondary = originSecondary;
+		}
+
+		#endregion
+	}
+
+	#endregion
 }
