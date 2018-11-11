@@ -81,4 +81,37 @@ namespace Assets.Scripts.UserInput
 	}
 
 	#endregion
+
+	#region Single-finger
+
+	/// <summary>
+	/// Represents user gestures that are made using one finger
+	/// </summary>
+	public abstract class SingleFingerGesture : Gesture
+	{
+		#region Properties
+
+		/// <summary>
+		/// The <see cref="Vector2"/> containing coordinates of the place where this gesture started
+		/// </summary>
+		public Vector2 Origin { get; }
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base single-finger gesture
+		/// </summary>
+		/// <param name="origin">The <see cref="Vector2"/> containing coordinates of the place where this gesture started</param>
+		/// <param name="type">Type of this gesture</param>
+		protected SingleFingerGesture( Vector2 origin, GestureType type ) : base( type )
+		{
+			Origin = origin;
+		}
+
+		#endregion
+	}
+
+	#endregion
 }
