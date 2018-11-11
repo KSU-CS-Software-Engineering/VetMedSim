@@ -10,7 +10,8 @@ namespace Assets.Scripts.UserInput
 	public enum GestureType
 	{
 		Tap,
-		Hold
+		Hold,
+		Drag
 	}
 
 	/// <summary>
@@ -157,6 +158,70 @@ namespace Assets.Scripts.UserInput
 		public Hold( Vector2 origin ) : base( origin, GestureType.Hold )
 		{
 			// intentionally left blank
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents user (prolonged moved) drag gesture
+	/// </summary>
+	public class Drag : SingleFingerGesture
+	{
+		#region Properties
+
+		/// <summary>
+		/// Coordinates of last user touch
+		/// </summary>
+		public Vector2 End { get; set; }
+
+		/// <summary>
+		/// Overall direction of this gesture
+		/// </summary>
+		public Vector2 Direction => End - Origin;
+
+		/// <summary>
+		/// Direction of this gesture from last update (frame)
+		/// </summary>
+		public Vector2 DeltaDirection { get; private set; }
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs drag gesture
+		/// </summary>
+		/// <param name="origin">The <see cref="Vector2"/> containing coordinates of the place where this gesture started</param>
+		/// <param name="end">The last known position of this gesture</param>
+		public Drag( Vector2 origin, Vector2 end ) : base( origin, GestureType.Drag )
+		{
+			End = end;
+			DeltaDirection = Origin - End;
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Updates the last know position by moving to given coordinates
+		/// </summary>
+		/// <param name="end">New value of coordinates</param>
+		public void MoveTo( Vector2 end )
+		{
+			End = end;
+			DeltaDirection = Origin - End;
+		}
+
+		/// <summary>
+		/// Updates the last know position by moving by given delta coordinates
+		/// </summary>
+		/// <param name="delta">Difference of coordinates that should be applied to last known position</param>
+		public void MoveBy( Vector2 delta )
+		{
+			DeltaDirection = delta;
+			End += delta;
 		}
 
 		#endregion
