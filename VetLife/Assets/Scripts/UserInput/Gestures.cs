@@ -9,7 +9,7 @@ namespace Assets.Scripts.UserInput
 	/// </summary>
 	public enum GestureType
 	{
-		// intentionally left blank
+		Tap
 	}
 
 	/// <summary>
@@ -108,6 +108,35 @@ namespace Assets.Scripts.UserInput
 		protected SingleFingerGesture( Vector2 origin, GestureType type ) : base( type )
 		{
 			Origin = origin;
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents user (single or multiple) tap gesture
+	/// </summary>
+	public class Tap : SingleFingerGesture
+	{
+		#region Properties
+
+		/// <summary>
+		/// Number of consecutive taps user performed
+		/// </summary>
+		public int TapCount { get; }
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs tap gesture
+		/// </summary>
+		/// <param name="origin">The <see cref="Vector2"/> containing coordinates of the place where this gesture started</param>
+		/// <param name="tapCount">Number of consecutive taps user performed</param>
+		public Tap( Vector2 origin, int tapCount ) : base( origin, GestureType.Tap )
+		{
+			TapCount = tapCount;
 		}
 
 		#endregion
