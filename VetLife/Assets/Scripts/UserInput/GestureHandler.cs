@@ -50,6 +50,8 @@ namespace Assets.Scripts.UserInput
 			{
 				Handler.FinishGesture();
 			}
+
+			Handler.ChangeState( new GatheringState( Handler ) );
 		}
 
 		/// <summary>
@@ -103,6 +105,100 @@ namespace Assets.Scripts.UserInput
 		internal override void OnUpdate()
 		{
 			// intentionally left blank
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents input state, which input is being gathered in
+	/// </summary>
+	internal class GatheringState : InputState
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base gathering state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		internal GatheringState( GestureHandler handler ) : base( handler )
+		{
+			// intentionally left blank
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnUpdate()
+		{
+			if( HasDetectedEarlyTap() )
+			{
+				// TODO: Transition to Tap state
+
+				return;
+			}
+
+			if( !HasTimePassed( Handler.ReactionTimeThreshold ) )
+			{
+				return;
+			}
+
+			if( Handler.ActiveTouches.Count == 1 )
+			{
+				Handler.ChangeState( RecognizeSingleFingerGesture() );
+			}
+
+			if( Handler.ActiveTouches.Count >= 2 )
+			{
+				Handler.ChangeState( RecognizeDoubleFingerGesture() );
+			}
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Checks, wether the user has finished the touch within gathering period
+		/// </summary>
+		/// <returns>True in case early tap is detected, false otherwise</returns>
+		private bool HasDetectedEarlyTap()
+		{
+			return Handler.ActiveTouches.Count == 1
+				&& Handler.ActiveTouchFlags[Handler.MainTouch.fingerId].HasEnded;
+		}
+
+		/// <summary>
+		/// Recognizes currenlty drawn single-finger gesture and switches to appropriate state
+		/// </summary>
+		/// <returns>Appropriate <see cref="GathererState"/> to switch to</returns>
+		private InputState RecognizeSingleFingerGesture()
+		{
+			var touch = Handler.MainTouch;
+			var flags = Handler.ActiveTouchFlags[touch.fingerId];
+
+			if( flags.HasEnded )
+			{
+				return null; // TODO: Add Tap state
+			}
+			else if( flags.HasMoved )
+			{
+				return null; // TODO: Add Drag state
+			}
+			else
+			{
+				return null; // TODO: Add Hold state
+			}
+		}
+
+		/// <summary>
+		/// Recognizes currenlty drawn double-finger gesture and switches to appropriate state
+		/// </summary>
+		/// <returns>Appropriate <see cref="GathererState"/> to switch to</returns>
+		private InputState RecognizeDoubleFingerGesture()
+		{
+			return null; // TODO: Add Pinch state
 		}
 
 		#endregion
