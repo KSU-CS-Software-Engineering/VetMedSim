@@ -198,7 +198,7 @@ namespace Assets.Scripts.UserInput
 		/// <returns>Appropriate <see cref="GathererState"/> to switch to</returns>
 		private InputState RecognizeDoubleFingerGesture()
 		{
-			return null; // TODO: Add Pinch state
+			return new PinchState( Handler );
 		}
 
 		#endregion
@@ -377,6 +377,75 @@ namespace Assets.Scripts.UserInput
 
 				Handler.ResetTouchFlags( touch );
 				Handler.ChangeState( new DragState( Handler ) );
+			}
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents input state, which pinch gesture is being registered in
+	/// </summary>
+	internal class PinchState : InputState
+	{
+		#region Fields
+
+		/// <summary>
+		/// Currently active pinch gesture
+		/// </summary>
+		private readonly Pinch _pinch;
+
+		#endregion
+
+		#region Constructor
+
+		/// <summary>
+		/// Constructs base pinch state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		internal PinchState( GestureHandler handler ) : base( handler )
+		{
+			_pinch = new Pinch( Handler.FindOrigin( Handler.MainTouch ), Handler.FindOrigin( Handler.SecondaryTouch ) );
+			Handler.RegisterGesture( _pinch );
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnUpdate()
+		{
+			var mainTouch = Handler.MainTouch;
+			var mainFlags = Handler.ActiveTouchFlags[mainTouch.fingerId];
+
+			var secondaryTouch = Handler.SecondaryTouch;
+			var secondaryFlags = Handler.ActiveTouchFlags[secondaryTouch.fingerId];
+
+			if( mainFlags.HasEnded || secondaryFlags.HasEnded )
+			{
+				Handler.FinishGesture();
+				if( mainFlags.HasEnded )
+				{
+					Handler.UnregisterTouch( mainTouch );
+				}
+
+				if( secondaryFlags.HasEnded )
+				{
+					Handler.UnregisterTouch( secondaryTouch );
+				}
+
+				if( Handler.ActiveTouches.Any() )
+				{
+					Handler.ChangeState( new GatheringState( Handler ) );
+				}
+				else
+				{
+					Handler.ChangeState( new IdleState( Handler ) );
+				}
+			}
+			else
+			{
+				_pinch.MoveTo( mainTouch.position, secondaryTouch.position );
 			}
 		}
 
