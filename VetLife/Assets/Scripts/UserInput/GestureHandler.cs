@@ -80,6 +80,34 @@ namespace Assets.Scripts.UserInput
 		#endregion
 	}
 
+	/// <summary>
+	/// Represents input state, when no input is being processed
+	/// </summary>
+	internal class IdleState : InputState
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base idle state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		internal IdleState( GestureHandler handler ) : base( handler )
+		{
+			// intentionally left blank
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnUpdate()
+		{
+			// intentionally left blank
+		}
+
+		#endregion
+	}
+
 	#endregion
 
 	/// <summary>
@@ -215,7 +243,7 @@ namespace Assets.Scripts.UserInput
 			ActiveTouchFlags = new Dictionary<int, TouchFlags>();
 			ActiveTouchOrigins = new Dictionary<int, Vector2>();
 
-			State = null;
+			State = new IdleState( this );
 		}
 
 		private void Update()
