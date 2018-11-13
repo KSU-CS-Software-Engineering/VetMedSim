@@ -184,7 +184,7 @@ namespace Assets.Scripts.UserInput
 			}
 			else if( flags.HasMoved )
 			{
-				return null; // TODO: Add Drag state
+				return new DragState( Handler );
 			}
 			else
 			{
@@ -259,6 +259,80 @@ namespace Assets.Scripts.UserInput
 
 				Handler.UnregisterTouch( touch );
 				Handler.ChangeState( new IdleState( Handler ) );
+			}
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents input state, which drag motion is being resitered in
+	/// </summary>
+	internal class DragState : InputState
+	{
+		#region Fields
+
+		/// <summary>
+		/// Currenlty active drag gesture
+		/// </summary>
+		private readonly Drag _drag;
+
+		/// <summary>
+		/// Time the dragged motion has stayed stationary
+		/// </summary>
+		private float _stationaryTime;
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base drag state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		internal DragState( GestureHandler handler ) : base( handler )
+		{
+			_drag = new Drag( Handler.FindOrigin( Handler.MainTouch ), Handler.MainTouch.position );
+			Handler.RegisterGesture( _drag );
+
+			_stationaryTime = 0f;
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnUpdate()
+		{
+			var touch = Handler.MainTouch;
+			var flags = Handler.ActiveTouchFlags[touch.fingerId];
+
+			if( IsStationary( touch ) )
+			{
+				_stationaryTime += Time.deltaTime;
+			}
+			else
+			{
+				_stationaryTime = 0f;
+			}
+
+			if( flags.HasEnded )
+			{
+				Handler.FinishGesture();
+
+				Handler.UnregisterTouch( touch );
+				Handler.ChangeState( new IdleState( Handler ) );
+			}
+			else if( _stationaryTime >= Handler.StationaryTimeThreshold )
+			{
+				Handler.FinishGesture();
+
+				Handler.ResetTouchFlags( touch );
+				// TODO: Transition to Hold state
+			}
+			else
+			{
+				_drag.MoveTo( touch.position );
 			}
 		}
 
