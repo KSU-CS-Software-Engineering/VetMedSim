@@ -134,7 +134,7 @@ namespace Assets.Scripts.UserInput
 		{
 			if( HasDetectedEarlyTap() )
 			{
-				// TODO: Transition to Tap state
+				Handler.ChangeState( new TapState( Handler ) );
 
 				return;
 			}
@@ -180,7 +180,7 @@ namespace Assets.Scripts.UserInput
 
 			if( flags.HasEnded )
 			{
-				return null; // TODO: Add Tap state
+				return new TapState( Handler );
 			}
 			else if( flags.HasMoved )
 			{
@@ -199,6 +199,67 @@ namespace Assets.Scripts.UserInput
 		private InputState RecognizeDoubleFingerGesture()
 		{
 			return null; // TODO: Add Pinch state
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents input state, which taps are being registered in
+	/// </summary>
+	internal class TapState : InputState
+	{
+		#region Fields
+
+		/// <summary>
+		/// Current number of registered taps
+		/// </summary>
+		private int _tapCount;
+
+		/// <summary>
+		/// Additional time STM will remain in this state before transitioning out
+		/// </summary>
+		private float _reactionTimeExtension;
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base tap state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		internal TapState( GestureHandler handler ) : base( handler )
+		{
+			_tapCount = 0;
+			_reactionTimeExtension = Handler.TapDifferenceTimeThreshold;
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnUpdate()
+		{
+			if( !HasTimePassed( _reactionTimeExtension ) )
+			{
+				return;
+			}
+
+			var touch = Handler.MainTouch;
+			if( touch.tapCount != _tapCount )
+			{
+				_tapCount = touch.tapCount;
+				_reactionTimeExtension += Handler.TapDifferenceTimeThreshold;
+			}
+			else
+			{
+				Handler.RegisterGesture( new Tap( Handler.FindOrigin( Handler.MainTouch ), _tapCount ) );
+				Handler.FinishGesture();
+
+				Handler.UnregisterTouch( touch );
+				Handler.ChangeState( new IdleState( Handler ) );
+			}
 		}
 
 		#endregion
