@@ -4,6 +4,84 @@ using UnityEngine;
 
 namespace Assets.Scripts.UserInput
 {
+	#region Gesture Gatherer State Machine
+
+	/// <summary>
+	/// Represents base abstract gesture input state
+	/// </summary>
+	internal abstract class InputState
+	{
+		#region Properties
+
+		/// <summary>
+		/// Reference to the <see cref="GestureHandler"/> owner object
+		/// </summary>
+		protected GestureHandler Handler;
+
+		/// <summary>
+		/// The time current state started
+		/// </summary>
+		protected readonly float StartTime;
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base input state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		protected InputState( GestureHandler handler )
+		{
+			Handler = handler;
+			StartTime = Time.time;
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Responds to situation when there is new unregistered input
+		/// </summary>
+		internal virtual void OnNewInput()
+		{
+			if( Handler.ActiveGesture != null )
+			{
+				Handler.FinishGesture();
+			}
+		}
+
+		/// <summary>
+		/// Handles the updating of currently active touches and gesture
+		/// </summary>
+		internal abstract void OnUpdate();
+
+		/// <summary>
+		/// Checks, whether time elapsed in this state has crossed given threshold
+		/// </summary>
+		/// <param name="threshold">Threshold to check</param>
+		/// <returns>True in case state is up longer than given threshold, false otherwise</returns>
+		internal bool HasTimePassed( float threshold )
+		{
+			return Time.time - StartTime >= threshold;
+		}
+
+		/// <summary>
+		/// Checks, whether given <see cref="Touch"/> is stationary compared to last frame
+		/// </summary>
+		/// <param name="touch"><see cref="Touch"/> to be checked</param>
+		/// <returns>True in case the delta of <see cref="Touch"/> position is lesser than given threshold, false otherwise</returns>
+		internal bool IsStationary( Touch touch )
+		{
+			return touch.deltaPosition.magnitude <= Handler.StationaryDistanceThreshold;
+		}
+
+		#endregion
+	}
+
+	#endregion
+
 	/// <summary>
 	/// Contains flags for touch object
 	/// </summary>
@@ -89,6 +167,11 @@ namespace Assets.Scripts.UserInput
 		#region Internal
 
 		/// <summary>
+		/// Current state of handler
+		/// </summary>
+		internal InputState State { get; private set; }
+
+		/// <summary>
 		/// The first registered touch
 		/// </summary>
 		internal Touch MainTouch => ActiveTouches.Values.ElementAt( 0 );
@@ -131,6 +214,22 @@ namespace Assets.Scripts.UserInput
 			ActiveTouches = new Dictionary<int, Touch>();
 			ActiveTouchFlags = new Dictionary<int, TouchFlags>();
 			ActiveTouchOrigins = new Dictionary<int, Vector2>();
+
+			State = null;
+		}
+
+		private void Update()
+		{
+			UpdateTouches();
+
+			if( NewTouches.Any() )
+			{
+				State.OnNewInput();
+			}
+			else
+			{
+				State.OnUpdate();
+			}
 		}
 
 		#endregion
@@ -184,6 +283,16 @@ namespace Assets.Scripts.UserInput
 		{
 			ActiveTouches.Remove( touch.fingerId );
 			ActiveTouchFlags.Remove( touch.fingerId );
+		}
+
+		/// <summary>
+		/// Changes current state of gatherer
+		/// </summary>
+		/// <param name="state"><see cref="InputState"/> to be set as new</param>
+		internal void ChangeState( InputState state )
+		{
+			State = state;
+			State.OnUpdate();
 		}
 
 		#endregion
