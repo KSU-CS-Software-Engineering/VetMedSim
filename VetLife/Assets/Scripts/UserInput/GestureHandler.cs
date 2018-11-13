@@ -188,7 +188,7 @@ namespace Assets.Scripts.UserInput
 			}
 			else
 			{
-				return null; // TODO: Add Hold state
+				return new HoldState( Handler );
 			}
 		}
 
@@ -328,11 +328,55 @@ namespace Assets.Scripts.UserInput
 				Handler.FinishGesture();
 
 				Handler.ResetTouchFlags( touch );
-				// TODO: Transition to Hold state
+				Handler.ChangeState( new HoldState( Handler ) );
 			}
 			else
 			{
 				_drag.MoveTo( touch.position );
+			}
+		}
+
+		#endregion
+	}
+
+	/// <summary>
+	/// Represents input state, which hold gesture is being registered in
+	/// </summary>
+	internal class HoldState : InputState
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Contructs base hold state
+		/// </summary>
+		/// <param name="handler">Reference to the <see cref="GestureHandler"/> owner object</param>
+		internal HoldState( GestureHandler handler ) : base( handler )
+		{
+			Handler.RegisterGesture( new Hold( Handler.FindOrigin( Handler.MainTouch ) ) );
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnUpdate()
+		{
+			var touch = Handler.MainTouch;
+			var flags = Handler.ActiveTouchFlags[touch.fingerId];
+
+			if( flags.HasEnded )
+			{
+				Handler.FinishGesture();
+
+				Handler.UnregisterTouch( touch );
+				Handler.ChangeState( new IdleState( Handler ) );
+			}
+			else if( flags.HasMoved )
+			{
+				Handler.FinishGesture();
+
+				Handler.ResetTouchFlags( touch );
+				Handler.ChangeState( new DragState( Handler ) );
 			}
 		}
 
