@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floors
+    uniqueID: 2204461045
+    locked: 0
+  - name: Walls
+    uniqueID: 1662868377
+    locked: 0
+  - name: Furniture
+    uniqueID: 3452381781
+    locked: 0
+  - name: Player
+    uniqueID: 1756804087
+    locked: 0
+  - name: Foreground
+    uniqueID: 107443093
+    locked: 0
+  - name: Wall Tops
+    uniqueID: 1460874913
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
