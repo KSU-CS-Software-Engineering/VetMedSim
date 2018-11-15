@@ -505,6 +505,15 @@ namespace Assets.Scripts.UserInput
 	/// </summary>
 	public class GestureHandler : MonoBehaviour
 	{
+		#region Fields
+
+		/// <summary>
+		/// List of currently subsribed listeners for gestures
+		/// </summary>
+		private readonly List<IGestureListener> _listeners = new List<IGestureListener>();
+
+		#endregion
+
 		#region Properties
 
 		#region Public
@@ -608,6 +617,28 @@ namespace Assets.Scripts.UserInput
 
 		#region Functions
 
+		#region Public
+
+		/// <summary>
+		/// Registers given <see cref="IGestureListener"/> to receive gesture notifications
+		/// </summary>
+		/// <param name="listener">Object to be registered for listening</param>
+		public void RegisterListener( IGestureListener listener )
+		{
+			_listeners.Add( listener );
+		}
+
+		/// <summary>
+		/// Removes given <see cref="IGestureListener"/> from list of listeners
+		/// </summary>
+		/// <param name="listener">Object which should no longer receive gesture notifications</param>
+		public void UnregisterListener( IGestureListener listener )
+		{
+			_listeners.Remove( listener );
+		}
+
+		#endregion
+
 		#region Internal
 
 		/// <summary>
@@ -635,6 +666,11 @@ namespace Assets.Scripts.UserInput
 		/// <param name="gesture"><see cref="Gesture"/> to be set as currently active</param>
 		internal void RegisterGesture( Gesture gesture )
 		{
+			foreach( var listener in _listeners )
+			{
+				listener.OnGestureStart( gesture );
+			}
+
 			ActiveGesture = gesture;
 		}
 
@@ -643,6 +679,11 @@ namespace Assets.Scripts.UserInput
 		/// </summary>
 		internal void FinishGesture()
 		{
+			foreach( var listener in _listeners )
+			{
+				listener.OnGestureEnd( ActiveGesture );
+			}
+
 			ActiveGesture.Finish();
 			ActiveGesture = null;
 		}
