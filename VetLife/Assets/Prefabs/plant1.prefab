@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4441059303863968}
   - component: {fileID: 212085905745123454}
+  - component: {fileID: 60569720058350904}
   m_Layer: 0
   m_Name: plant1
   m_TagString: Untagged
@@ -40,6 +41,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60569720058350904
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154052766368738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28125, y: 1.6875}
+    newSize: {x: 1.28125, y: 1.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.58377075, y: 0.34939575}
+      - {x: 0.5281544, y: 0.5625}
+      - {x: 0.45877028, y: 0.6350527}
+      - {x: 0.28310728, y: 0.74628544}
+      - {x: -0.08817768, y: 0.82750607}
+      - {x: -0.41939878, y: 0.6456518}
+      - {x: -0.5594044, y: 0.42937756}
+      - {x: -0.5512819, y: 0.21875}
+      - {x: -0.31257343, y: -0.03248787}
+      - {x: -0.11345196, y: -0.044641495}
+      - {x: -0.13372993, y: -0.24317741}
+      - {x: -0.2700324, y: -0.3343897}
+      - {x: -0.25254965, y: -0.7005749}
+      - {x: -0.14750862, y: -0.7787733}
+      - {x: 0.09189272, y: -0.80313873}
+      - {x: 0.23878193, y: -0.73499393}
+      - {x: 0.31752634, y: -0.39372063}
+      - {x: 0.13532925, y: -0.21921921}
+      - {x: 0.11368036, y: -0.06767082}
+      - {x: 0.5756488, y: 0.22811031}
 --- !u!212 &212085905745123454
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -73,7 +118,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -842585515
-  m_SortingLayer: -1
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300220, guid: 5b6f65f8caf8a364687a4b802cde0711, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
