@@ -81,6 +81,109 @@ namespace Assets.Scripts.Player
 		#endregion
 	}
 
+	/// <summary>
+	/// Represents player state, when player is walking towards given point
+	/// </summary>
+	internal class WalkingState : PlayerState
+	{
+		#region Fields
+
+		/// <summary>
+		/// Final destination of walking
+		/// </summary>
+		private readonly Vector2 _destination;
+
+		#endregion
+
+		#region Properties
+
+		/// <summary>
+		/// Relative position of the destination to player position
+		/// </summary>
+		internal Vector2 RelativePosition => _destination - Player.Position;
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base walking state
+		/// </summary>
+		/// <param name="player">Reference to the <see cref="PlayerController"/> owner object</param>
+		/// <param name="destination"><see cref="Vector2"/> specifying final movement destination</param>
+		internal WalkingState( PlayerController player, Vector2 destination ) : base( player )
+		{
+			_destination = destination;
+			Face( RelativePosition );
+
+			Player.Animator.SetTrigger( Player.MOVE_ANIMATION_TRIGGER );
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnCollision( Collision2D collision )
+		{
+			StopMovement();
+		}
+
+		internal override void OnUpdate()
+		{
+			Move();
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Turns player character (if necessary) so they will end up facing destination position
+		/// </summary>
+		/// <param name="relativePosition">Relative position of destination to player character's location</param>
+		private void Face( Vector2 relativePosition )
+		{
+			var scale = Player.gameObject.transform.localScale;
+			var facingLeft = scale.x > 0;
+
+			if( ( facingLeft && relativePosition.x > 0 ) || ( !facingLeft && relativePosition.x < 0 ) )
+			{
+				Player.gameObject.transform.localScale = new Vector3( -1 * scale.x, 1f, 1f );
+			}
+		}
+
+		/// <summary>
+		/// Moves player based on their speed towards destination
+		/// </summary>
+		private void Move()
+		{
+			var finalVelocity = RelativePosition;
+			if( RelativePosition.magnitude > Player.Speed * Time.deltaTime )
+			{
+				finalVelocity = RelativePosition.normalized * Player.Speed * Time.deltaTime;
+			}
+
+			if( finalVelocity.magnitude > 0 )
+			{
+				Player.gameObject.transform.Translate( finalVelocity );
+			}
+			else
+			{
+				StopMovement();
+			}
+		}
+
+		/// <summary>
+		/// Stops currently active movement of the player
+		/// </summary>
+		private void StopMovement()
+		{
+			Player.ChangeState( new IdleState( Player ) );
+		}
+
+		#endregion
+	}
+
 	#endregion
 
 	/// <summary>
@@ -174,7 +277,7 @@ namespace Assets.Scripts.Player
 					var origin = ((Tap) gesture).Origin;
 					var destination = Camera.main.ScreenToWorldPoint( origin );
 
-					// TODO: Start walking towards destination
+					ChangeState( new WalkingState( this, destination ) );
 					break;
 			}
 		}
