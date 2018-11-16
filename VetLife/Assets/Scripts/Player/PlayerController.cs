@@ -7,7 +7,7 @@ namespace Assets.Scripts.Player
 	/// Defines the behavior of the player sprite
 	/// </summary>
 	[RequireComponent( typeof( Animator ) )]
-	public class PlayerController : MonoBehaviour
+	public class PlayerController : MonoBehaviour, IGestureListener
 	{
 		#region Constants
 
@@ -46,7 +46,31 @@ namespace Assets.Scripts.Player
 
 		private void Awake()
 		{
+			GestureHandler.RegisterListener( this );
+
 			Animator = GetComponent<Animator>();
+		}
+
+		#endregion
+
+		#region IGestureListener
+
+		public void OnGestureStart( Gesture gesture )
+		{
+			switch( gesture.Type )
+			{
+				case GestureType.Tap:
+					var origin = ((Tap) gesture).Origin;
+					var destination = Camera.main.ScreenToWorldPoint( origin );
+
+					// TODO: Start walking towards destination
+					break;
+			}
+		}
+
+		public void OnGestureEnd( Gesture gesture )
+		{
+			// intentionally left blank
 		}
 
 		#endregion
