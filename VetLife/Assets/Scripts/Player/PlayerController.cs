@@ -48,6 +48,39 @@ namespace Assets.Scripts.Player
 		#endregion
 	}
 
+	/// <summary>
+	/// Represents player state, when player is not doing anything
+	/// </summary>
+	internal class IdleState : PlayerState
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base idle state
+		/// </summary>
+		/// <param name="player">Reference to the <see cref="PlayerController"/> owner object</param>
+		internal IdleState( PlayerController player ) : base( player )
+		{
+			Player.Animator.ResetTrigger( Player.MOVE_ANIMATION_TRIGGER );
+		}
+
+		#endregion
+
+		#region Overrides
+
+		internal override void OnCollision( Collision2D collision )
+		{
+			// intentionally left blank
+		}
+
+		internal override void OnUpdate()
+		{
+			// intentionally left blank
+		}
+
+		#endregion
+	}
+
 	#endregion
 
 	/// <summary>
@@ -101,6 +134,8 @@ namespace Assets.Scripts.Player
 			GestureHandler.RegisterListener( this );
 
 			Animator = GetComponent<Animator>();
+
+			State = new IdleState( this );
 		}
 
 		private void Update()
