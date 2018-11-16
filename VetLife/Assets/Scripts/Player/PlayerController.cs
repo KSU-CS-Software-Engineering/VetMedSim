@@ -3,6 +3,53 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
+	#region Player State Machine
+
+	/// <summary>
+	/// Represents base abstract player state
+	/// </summary>
+	internal abstract class PlayerState
+	{
+		#region Properties
+
+		/// <summary>
+		/// Reference to the <see cref="PlayerController"/> owner object
+		/// </summary>
+		internal PlayerController Player { get; private set; }
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Constructs base player state
+		/// </summary>
+		/// <param name="player">Reference to the <see cref="PlayerController"/> owner object</param>
+		protected PlayerState( PlayerController player )
+		{
+			Player = player;
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Handles the updating of currently active state
+		/// </summary>
+		internal abstract void OnUpdate();
+
+		/// <summary>
+		/// Defines behavior when player sprite collides with something
+		/// </summary>
+		/// <param name="collision">Object containing collision details</param>
+		internal abstract void OnCollision( Collision2D collision );
+
+		#endregion
+	}
+
+	#endregion
+
 	/// <summary>
 	/// Defines the behavior of the player sprite
 	/// </summary>
@@ -31,6 +78,11 @@ namespace Assets.Scripts.Player
 		public float Speed;
 
 		/// <summary>
+		/// Current state of the player
+		/// </summary>
+		internal PlayerState State { get; private set; }
+
+		/// <summary>
 		/// Animator component of player object
 		/// </summary>
 		internal Animator Animator { get; private set; }
@@ -49,6 +101,30 @@ namespace Assets.Scripts.Player
 			GestureHandler.RegisterListener( this );
 
 			Animator = GetComponent<Animator>();
+		}
+
+		private void Update()
+		{
+			State.OnUpdate();
+		}
+
+		private void OnCollisionStay2D( Collision2D collision )
+		{
+			State.OnCollision( collision );
+		}
+
+		#endregion
+
+		#region Functions
+
+		/// <summary>
+		/// Changes player state to given one
+		/// </summary>
+		/// <param name="state">New state of player</param>
+		internal void ChangeState( PlayerState state )
+		{
+			State = state;
+			State.OnUpdate();
 		}
 
 		#endregion
