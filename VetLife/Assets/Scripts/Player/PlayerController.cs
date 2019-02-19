@@ -230,6 +230,8 @@ namespace Assets.Scripts.Player
 
         private Vector2 Direction;
 
+        private Rigidbody2D Body;
+
 		#endregion
 
 		#region Overrides
@@ -241,6 +243,8 @@ namespace Assets.Scripts.Player
 			Animator = GetComponent<Animator>();
 
 			State = new IdleState( this );
+
+            Body = GetComponent<Rigidbody2D>();
 		}
 
         private void Update()
@@ -250,9 +254,16 @@ namespace Assets.Scripts.Player
             wasdMove();
             
         }
+
+        private float xInput, yInput;
         private void wasdMove()
         {
-            transform.Translate(Direction * Speed * Time.deltaTime);
+            xInput = Input.GetAxisRaw("Horizontal");
+            yInput = Input.GetAxisRaw("Vertical");
+            var moveVector = new Vector3(xInput, yInput, 0);
+
+            Body.MovePosition(new Vector2((transform.position.x + moveVector.x * Speed * Time.deltaTime), transform.position.y + moveVector.y * Speed * Time.deltaTime));
+            //transform.Translate(Direction * Speed * Time.deltaTime);
         }
 
         private void getInput()
