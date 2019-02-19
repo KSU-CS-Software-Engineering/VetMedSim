@@ -228,6 +228,8 @@ namespace Assets.Scripts.Player
 		/// </summary>
 		internal Vector2 Position => gameObject.transform.position;
 
+        private Vector2 Direction;
+
 		#endregion
 
 		#region Overrides
@@ -241,10 +243,38 @@ namespace Assets.Scripts.Player
 			State = new IdleState( this );
 		}
 
-		private void Update()
-		{
-			State.OnUpdate();
-		}
+        private void Update()
+        {
+            State.OnUpdate();
+            getInput();
+            wasdMove();
+            
+        }
+        private void wasdMove()
+        {
+            transform.Translate(Direction * Speed * Time.deltaTime);
+        }
+
+        private void getInput()
+        {
+            Direction = Vector2.zero;
+            if (Input.GetKey(KeyCode.W))
+            {
+                Direction += Vector2.up;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                Direction += Vector2.left;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                Direction += Vector2.down;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                Direction += Vector2.right;
+            }
+        }
 
 		private void OnCollisionStay2D( Collision2D collision )
 		{
