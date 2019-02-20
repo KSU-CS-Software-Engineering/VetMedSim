@@ -6,6 +6,6 @@ namespace Assets.Scripts.Interaction.Options.Sprite
 {
     public interface IInteractiveObject
     {
-
+        
     }
 }
