@@ -18,6 +18,12 @@ public class ShowCanvas : MonoBehaviour
         CanvasObject.SetActive(true);
     }
 
+    public void DeactivateUI()
+    {
+        CanvasObject.GetComponent<Canvas>().enabled = false;
+        CanvasObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
