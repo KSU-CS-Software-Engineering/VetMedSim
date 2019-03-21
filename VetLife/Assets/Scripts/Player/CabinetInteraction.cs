@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.UserInput;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.UserInput;
 
 namespace Assets.Scripts.Player
 {
