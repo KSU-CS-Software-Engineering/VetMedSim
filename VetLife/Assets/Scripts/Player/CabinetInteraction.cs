@@ -42,8 +42,8 @@ namespace Assets.Scripts.Player
             {
                 case GestureType.Tap:
                     var origin = ((Tap)gesture).Origin;
-                    var destination = Camera.main.ScreenToWorldPoint(origin);
-                    RaycastHit2D hit = Physics2D.Raycast(destination, Vector2.zero);
+                    var gestureLocation = Camera.main.ScreenToWorldPoint(origin);
+                    RaycastHit2D hit = Physics2D.Raycast(gestureLocation, Vector2.zero);
                     if (hit.collider != null)
                     {
                         Debug.Log("I'm hitting " + hit.collider.name);
