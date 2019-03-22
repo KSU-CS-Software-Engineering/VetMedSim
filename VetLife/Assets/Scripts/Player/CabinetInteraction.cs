@@ -26,14 +26,14 @@ namespace Assets.Scripts.Player
         void Update()
         {
 
-            if ( Input.GetMouseButtonDown( 0 ) )
+            if( Input.GetMouseButtonDown( 0 ) )
             {
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
-                if ( hit.collider != null )
+                if( hit.collider != null )
                 {
                     Debug.Log( "I'm hitting " + hit.collider.name );
-                    if ( hit.collider.name.Equals( "cabinet2" ) )
+                    if( hit.collider.name.Equals( "cabinet2" ) )
                     {
                         canvas.enabled = !canvas.enabled;
                     }
