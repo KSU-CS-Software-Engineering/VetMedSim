@@ -19,7 +19,7 @@ namespace Assets.Scripts.Player
         #region Overrides
         void Start()
         {
-            canvas.enabled = false;
+            _canvas.enabled = false;
         }
 
         
@@ -35,7 +35,7 @@ namespace Assets.Scripts.Player
                     Debug.Log( "I'm hitting " + hit.collider.name );
                     if( hit.collider.name.Equals( "cabinet2" ) )
                     {
-                        canvas.enabled = !canvas.enabled;
+                        _canvas.enabled = !_canvas.enabled;
                     }
                 }
             }
@@ -56,7 +56,7 @@ namespace Assets.Scripts.Player
                         Debug.Log( "I'm hitting " + hit.collider.name );
                         if( hit.collider.name.Equals( "cabinet2" ) )
                         {
-                            canvas.enabled = !canvas.enabled;
+                            _canvas.enabled = !_canvas.enabled;
                         }
                     }
                     break;
