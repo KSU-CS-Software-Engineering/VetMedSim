@@ -12,7 +12,7 @@ namespace Assets.Scripts.Player
         /// <summary>
         /// Canvas to used displayed when the click/tap event is triggered
         /// </summary>
-        public Canvas canvas;
+        public Canvas _canvas;
         
         #endregion
 
@@ -26,14 +26,14 @@ namespace Assets.Scripts.Player
         void Update()
         {
 
-            if (Input.GetMouseButtonDown(0))
+            if ( Input.GetMouseButtonDown( 0 ) )
             {
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
-                if (hit.collider != null)
+                if ( hit.collider != null )
                 {
-                    Debug.Log("I'm hitting " + hit.collider.name);
-                    if (hit.collider.name.Equals("cabinet2"))
+                    Debug.Log( "I'm hitting " + hit.collider.name );
+                    if ( hit.collider.name.Equals( "cabinet2" ) )
                     {
                         canvas.enabled = !canvas.enabled;
                     }
@@ -43,18 +43,18 @@ namespace Assets.Scripts.Player
         #endregion
 
         #region IGestureListener
-        public void OnGestureStart(Gesture gesture)
+        public void OnGestureStart( Gesture gesture )
         {
-            switch (gesture.Type)
+            switch( gesture.Type )
             {
                 case GestureType.Tap:
-                    var origin = ((Tap)gesture).Origin;
-                    var gestureLocation = Camera.main.ScreenToWorldPoint(origin);
-                    RaycastHit2D hit = Physics2D.Raycast(gestureLocation, Vector2.zero);
-                    if (hit.collider != null)
+                    var origin = ( (Tap) gesture ).Origin;
+                    var gestureLocation = Camera.main.ScreenToWorldPoint( origin );
+                    RaycastHit2D hit = Physics2D.Raycast( gestureLocation, Vector2.zero );
+                    if( hit.collider != null )
                     {
-                        Debug.Log("I'm hitting " + hit.collider.name);
-                        if (hit.collider.name.Equals("cabinet2"))
+                        Debug.Log( "I'm hitting " + hit.collider.name );
+                        if( hit.collider.name.Equals( "cabinet2" ) )
                         {
                             canvas.enabled = !canvas.enabled;
                         }
@@ -63,7 +63,7 @@ namespace Assets.Scripts.Player
             }
         }
 
-        public void OnGestureEnd(Gesture gesture)
+        public void OnGestureEnd( Gesture gesture )
         {
             // intentionally left blank
         }
