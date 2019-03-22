@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 4951480565775794}
   - component: {fileID: 212868717465512032}
   - component: {fileID: 61285676980173326}
-  - component: {fileID: 1803774332695983758}
+  - component: {fileID: 6005126279317789572}
   m_Layer: 0
   m_Name: cabinet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4951480565775794
 Transform:
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5275049}
   m_EdgeRadius: 0
---- !u!114 &1803774332695983758
+--- !u!114 &6005126279317789572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1235284797887756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b5576c498d4384891df163da4efb06, type: 3}
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanvasObject: {fileID: 1235284797887756}
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2596854692292786842, guid: a290a2f74c4069b47971b4becf130566,
+            type: 3}
+          m_MethodName: ActivateUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []

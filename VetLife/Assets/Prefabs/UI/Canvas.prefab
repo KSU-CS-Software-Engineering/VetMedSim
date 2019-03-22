@@ -702,6 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasObject: {fileID: 2596854692292786833}
+  _gestureType: 0
 --- !u!1 &2596854692316041248
 GameObject:
   m_ObjectHideFlags: 0

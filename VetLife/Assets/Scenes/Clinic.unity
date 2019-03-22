@@ -174,6 +174,69 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2596854692292786836, guid: a290a2f74c4069b47971b4becf130566,
         type: 3}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2596854692292786842, guid: a290a2f74c4069b47971b4becf130566,
+        type: 3}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].eventID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2596854692292786842, guid: a290a2f74c4069b47971b4becf130566,
+        type: 3}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005126279317789572, guid: a42692783a540b54c9f0fc13164d74fb,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_TypeName
+      value: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42692783a540b54c9f0fc13164d74fb, type: 3}
 --- !u!1 &23289845
@@ -9323,6 +9386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasObject: {fileID: 2596854692292786833, guid: a290a2f74c4069b47971b4becf130566,
     type: 3}
+  _gestureType: 0
 --- !u!1 &1471530335
 GameObject:
   m_ObjectHideFlags: 0
@@ -10565,7 +10629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19dddf3109d28749889d2a2b2a96947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanvasObject: {fileID: 405712808}
+  CanvasObject: {fileID: 0}
+  _gestureType: 0
 --- !u!1001 &1801150958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28353,6 +28418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasObject: {fileID: 1937029827}
+  _gestureType: 0
 --- !u!1 &1960022130
 GameObject:
   m_ObjectHideFlags: 0
