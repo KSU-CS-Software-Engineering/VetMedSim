@@ -10700,6 +10700,11 @@ PrefabInstance:
       propertyPath: PopupSnackbar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114765402753051608, guid: 0e422d9f3d1cfea4d88cba423d0dabde,
+        type: 3}
+      propertyPath: collisionTimerThreshold
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 210256803829264196, guid: 0e422d9f3d1cfea4d88cba423d0dabde,
         type: 3}
       propertyPath: m_SortingLayerID

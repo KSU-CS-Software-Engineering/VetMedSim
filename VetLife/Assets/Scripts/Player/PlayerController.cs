@@ -201,6 +201,15 @@ namespace Assets.Scripts.Player
 
 		#endregion
 
+		#region Fields
+
+		/// <summary>
+		/// Timer to track how long since the last collision started.
+		/// </summary>
+		private float _collisionTimer;
+
+		#endregion
+
 		#region Properties
 
 		/// <summary>
@@ -212,6 +221,11 @@ namespace Assets.Scripts.Player
 		/// Speed by which the player character moves
 		/// </summary>
 		public float Speed;
+
+		/// <summary>
+		/// How long a continuous collision is tolerated before the state machine reacts.
+		/// </summary>
+		public float collisionTimerThreshold;
 
 		/// <summary>
 		/// Current state of the player
@@ -246,9 +260,19 @@ namespace Assets.Scripts.Player
 			State.OnUpdate();
 		}
 
+		private void OnCollisionEnter2D( Collision2D collision )
+		{
+			_collisionTimer = 0;
+		}
+
 		private void OnCollisionStay2D( Collision2D collision )
 		{
-			State.OnCollision( collision );
+			_collisionTimer += Time.deltaTime;
+			if(_collisionTimer >= collisionTimerThreshold)
+			{
+				_collisionTimer = 0;
+				State.OnCollision( collision );
+			}
 		}
 
 		#endregion
