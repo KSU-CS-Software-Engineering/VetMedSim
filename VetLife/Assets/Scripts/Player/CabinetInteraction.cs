@@ -7,20 +7,25 @@ namespace Assets.Scripts.Player
 {
     public class CabinetInteraction : MonoBehaviour, IGestureListener
     {
+        #region Fields
 
+        /// <summary>
+        /// Canvas to used displayed when the click/tap event is triggered
+        /// </summary>
         public Canvas canvas;
+        
+        #endregion
 
-        // Use this for initialization
+        #region Overrides
         void Start()
         {
             canvas.enabled = false;
         }
 
-        // Update is called once per frame
+        
         void Update()
         {
 
-            // Move this object to the position clicked by the mouse.
             if (Input.GetMouseButtonDown(0))
             {
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -35,7 +40,9 @@ namespace Assets.Scripts.Player
                 }
             }
         }
+        #endregion
 
+        #region IGestureListener
         public void OnGestureStart(Gesture gesture)
         {
             switch (gesture.Type)
@@ -60,5 +67,6 @@ namespace Assets.Scripts.Player
         {
             // intentionally left blank
         }
+        #endregion
     }
 }
