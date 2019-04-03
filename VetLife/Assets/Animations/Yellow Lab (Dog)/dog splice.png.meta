@@ -197,12 +197,12 @@ TextureImporter:
       name: dog splice_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 35.499992
         y: 1267
         width: 238
         height: 251
       alignment: 9
-      pivot: {x: 0.5021009, y: 0.49800798}
+      pivot: {x: 0.49579838, y: 0.49800798}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: dog splice_4
       rect:
         serializedVersion: 2
-        x: 704.49994
+        x: 703.49994
         y: 1116
         width: 117
         height: 168
       alignment: 9
-      pivot: {x: 0.49145353, y: 0.49404764}
+      pivot: {x: 0.50000054, y: 0.49404764}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,11 +278,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 109
-        y: 991
+        y: 991.00006
         width: 155
-        height: 119
+        height: 118.99994
       alignment: 9
-      pivot: {x: 0.5193548, y: 0.697479}
+      pivot: {x: 0.5193548, y: 0.69747883}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -418,11 +418,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 844
-        y: 511
-        width: 142
-        height: 103
+        y: 510
+        width: 143
+        height: 105
       alignment: 9
-      pivot: {x: 0.49295774, y: 0.49514565}
+      pivot: {x: 0.48951048, y: 0.49523813}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,6 +464,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 636898601644112459
+  userData: 636899118171222564
   assetBundleName: 
   assetBundleVariant: 
