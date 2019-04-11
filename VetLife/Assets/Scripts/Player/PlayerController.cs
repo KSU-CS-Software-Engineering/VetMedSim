@@ -241,7 +241,6 @@ namespace Assets.Scripts.Player
 		/// Current position of the player
 		/// </summary>
 		internal Vector2 Position => gameObject.transform.position;
-
 		#endregion
 
 		#region Overrides
@@ -253,7 +252,7 @@ namespace Assets.Scripts.Player
 			Animator = GetComponent<Animator>();
 
 			State = new IdleState( this );
-		}
+        }
 
 		private void Update()
 		{
@@ -288,21 +287,25 @@ namespace Assets.Scripts.Player
 			State = state;
 			State.OnUpdate();
 		}
-
-		#endregion
-
-		#region IGestureListener
-
-		public void OnGestureStart( Gesture gesture )
+        #endregion
+        public Transform target;
+        #region IGestureListener
+        public void OnGestureStart( Gesture gesture )
 		{
 			switch( gesture.Type )
 			{
 				case GestureType.Tap:
-					var origin = ((Tap) gesture).Origin;
-					var destination = Camera.main.ScreenToWorldPoint( origin );
 
-					ChangeState( new WalkingState( this, destination ) );
-					break;
+                    //PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+                    /*var origin = ((Tap) gesture).Origin;
+                    Vector3 startPath = new Vector3(Position.x, 0, Position.y);
+                    Vector3 endPath = new Vector3(origin.x, 0, origin.y);
+                    pathFinder.StartFindPath(startPath, endPath);
+					//var destination = Camera.main.ScreenToWorldPoint( origin );
+
+					//ChangeState( new WalkingState( this, destination ) );
+                    */
+                    break;
 			}
 		}
 

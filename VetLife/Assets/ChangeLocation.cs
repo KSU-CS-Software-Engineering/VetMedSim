@@ -1,29 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.UserInput;
 
-public class ChangeLocation : MonoBehaviour
+namespace Assets.Scripts.Player
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ChangeLocation : MonoBehaviour//, IGestureListener
     {
-        
-    }
+        public GestureHandler GestureHandler;
 
-    // Update is called once per frame
-    void Update()
-    {
-        for (var i = 0; i < Input.touchCount; i++)
+        // Start is called before the first frame update
+        void Start()
         {
 
+        }
 
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
+        // Update is called once per frame
+        void Update()
+        {
+           //test(GestureHandler.)
+
+        }
+
+        public void test(Gesture gesture)
+        {
+            var origin = ((Tap)gesture).Origin;
+            this.transform.Translate(origin.x, origin.y, origin.y);
+        }
+        public void OnGestureStart(Gesture gesture)
+        {
+            switch (gesture.Type)
             {
-
-
-                transform.position = new Vector3(Input.GetTouch(i).position.x, Input.GetTouch(i).position.y, transform.position.z);
-
+                case GestureType.Tap:
+                    var origin = ((Tap)gesture).Origin;
+                    this.transform.Translate(origin.x, origin.y, origin.y);
+                    break;
             }
         }
+
     }
 }
+

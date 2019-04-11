@@ -1,68 +1,108 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Unit : MonoBehaviour
+namespace Assets.Scripts.UserInput
 {
-
-
-    public Transform target;
-    float speed = (float)2.5;
-    Vector3[] path;
-    int targetIndex;
-
-    void Start()
+    public class Unit : MonoBehaviour, IGestureListener
     {
-        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
-    }
 
-    public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
-    {
-        if (pathSuccessful)
+
+        public Transform target;
+        float speed = (float)4;
+        Vector3[] path;
+        int targetIndex;
+
+        /// <summary>
+        /// Object handling gesture recognition
+        /// </summary>
+        public GestureHandler GestureHandler;
+
+        /// <summary>
+		/// Animator component of player object
+		/// </summary>
+		internal Animator Animator { get; private set; }
+
+        private void Awake()
         {
-            path = newPath;
-            targetIndex = 0;
-            StopCoroutine("FollowPath");
-            StartCoroutine("FollowPath");
+            Animator = GetComponent<Animator>();
         }
-    }
 
-    IEnumerator FollowPath()
-    {
-        Vector3 currentWaypoint = path[0];
-        while (true)
+        void Start()
         {
-            if (transform.position == currentWaypoint)
+           // PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        }
+
+        void Update()
+        {
+            
+        }
+        internal Vector2 Position => gameObject.transform.position;
+        public void OnGestureStart(Gesture gesture)
+        {
+            PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+            switch (gesture.Type)
             {
-                targetIndex++;
-                if (targetIndex >= path.Length)
-                {
-                    yield break;
-                }
-                currentWaypoint = path[targetIndex];
+                case GestureType.Tap:
+                    PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+                    break;
             }
-
-            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
-            yield return null;
-
         }
-    }
 
-    public void OnDrawGizmos()
-    {
-        if (path != null)
+        public void OnGestureEnd(Gesture gesture)
         {
-            for (int i = targetIndex; i < path.Length; i++)
-            {
-                Gizmos.color = Color.black;
-                Gizmos.DrawCube(path[i], Vector3.one);
+            //PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+            // intentionally left blank
+        }
 
-                if (i == targetIndex)
+        public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
+        {
+            if (pathSuccessful)
+            {
+                path = newPath;
+                targetIndex = 0;
+                StopCoroutine("FollowPath");
+                StartCoroutine("FollowPath");
+            }
+        }
+
+        IEnumerator FollowPath()
+        {
+            Vector3 currentWaypoint = path[0];
+            while (true)
+            {
+                if (transform.position == currentWaypoint)
                 {
-                    Gizmos.DrawLine(transform.position, path[i]);
+                    targetIndex++;
+                    if (targetIndex >= path.Length)
+                    {
+                        yield break;
+                    }
+                    currentWaypoint = path[targetIndex];
                 }
-                else
+
+                transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+                yield return null;
+
+            }
+        }
+
+        public void OnDrawGizmos()
+        {
+            if (path != null)
+            {
+                for (int i = targetIndex; i < path.Length; i++)
                 {
-                    Gizmos.DrawLine(path[i - 1], path[i]);
+                    Gizmos.color = Color.black;
+                    Gizmos.DrawCube(path[i], Vector3.one);
+
+                    if (i == targetIndex)
+                    {
+                        Gizmos.DrawLine(transform.position, path[i]);
+                    }
+                    else
+                    {
+                        Gizmos.DrawLine(path[i - 1], path[i]);
+                    }
                 }
             }
         }
