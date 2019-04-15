@@ -12,7 +12,7 @@ namespace Assets.Scripts.Object
         /// </summary>
         public void EnableObject()
         {
-            gameObject.SetActive(true);
+            gameObject.SetActive( true );
         }
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace Assets.Scripts.Object
         /// </summary>
         public void DisableObject()
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive( false );
         }
 
         #endregion
