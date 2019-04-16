@@ -33,6 +33,7 @@ public class Pathfinding : MonoBehaviour
 
         if (startNode.walkable && targetNode.walkable)
         {
+            Debug.Log("Path found to be walkable.");
             Heap<Node> openSet = new Heap<Node>(grid.MaxSize);
             HashSet<Node> closedSet = new HashSet<Node>();
             openSet.Add(startNode);
@@ -67,6 +68,10 @@ public class Pathfinding : MonoBehaviour
                     }
                 }
             }
+        }
+        else
+        {
+            throw new Exception("Invalid path requested.");
         }
         yield return null;
         if (pathSuccess)

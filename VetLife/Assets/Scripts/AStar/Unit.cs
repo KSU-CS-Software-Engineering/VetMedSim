@@ -51,6 +51,7 @@ namespace Assets.Scripts.UserInput
                     var origin = ( (Tap) gesture ).Origin;
                     var gestureLocation = Camera.main.ScreenToWorldPoint( origin );
                     var locationFORREAL = new Vector3(gestureLocation.x, (float)0, gestureLocation.y);
+                    var transformPosition = new Vector3(transform.position.x, (float)0, transform.position.y);
                     // RaycastHit2D hit = Physics2D.Raycast( gestureLocation, Vector2.zero );
                     
 
@@ -67,7 +68,7 @@ namespace Assets.Scripts.UserInput
                     // point = cam.ScreenToWorldPoint(new Vector3(tapPos.x, cam.nearClipPlane, tapPos.y));
 
                     // //Vector3 targetLocation = new Vector3(origin.x, 0, origin.y);
-                    PathRequestManager.RequestPath(transform.position, locationFORREAL, OnPathFound);
+                    PathRequestManager.RequestPath(transformPosition, locationFORREAL, OnPathFound);
                     Debug.Log(locationFORREAL.ToString());
                     break;
             }
