@@ -16,6 +16,7 @@ namespace Assets.Scripts.UserInput
         /// Object handling gesture recognition
         /// </summary>
         public GestureHandler GestureHandler;
+        
 
         /// <summary>
 		/// Animator component of player object
@@ -25,11 +26,14 @@ namespace Assets.Scripts.UserInput
         private void Awake()
         {
             Animator = GetComponent<Animator>();
+            GestureHandler.RegisterListener(this);
         }
 
+        private Camera cam;
         void Start()
         {
-           // PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+            cam = Camera.main;
+            // PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
         }
 
         void Update()
@@ -37,13 +41,28 @@ namespace Assets.Scripts.UserInput
             
         }
         internal Vector2 Position => gameObject.transform.position;
+
         public void OnGestureStart(Gesture gesture)
         {
-            PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+            //PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
             switch (gesture.Type)
             {
                 case GestureType.Tap:
-                    PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+
+                    Vector3 point = new Vector3();
+                    Event currentEvent = Event.current;
+                    Vector2 tapPos = new Vector2();
+
+                    var origin = ((Tap)gesture).Origin;
+                    // Get the mouse position from Event.
+                    // Note that the y position from Event is inverted.
+                    tapPos.x = origin.x;
+                    tapPos.y = cam.pixelHeight - origin.y;
+
+                    point = cam.ScreenToWorldPoint(new Vector3(tapPos.x, cam.nearClipPlane, tapPos.y));
+
+                    //Vector3 targetLocation = new Vector3(origin.x, 0, origin.y);
+                    PathRequestManager.RequestPath(transform.position, point, OnPathFound);
                     break;
             }
         }
