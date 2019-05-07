@@ -6,7 +6,7 @@ namespace Assets.Scripts.Interaction.Options
 	/// <summary>
 	/// Holds common functionality and interface description for interaction options
 	/// </summary>
-	public abstract class InteractionOption
+	public class InteractionOption : MonoBehaviour
 	{
 		#region Fields
 
