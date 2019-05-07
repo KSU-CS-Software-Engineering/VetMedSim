@@ -29,7 +29,9 @@ public class Grid : MonoBehaviour
             return gridSizeX * gridSizeY;
         }
     }
-
+    /// <summary>
+    /// Creates a 'grid'
+    /// </summary>
     void CreateGrid()
     {
         grid = new Node[gridSizeX, gridSizeY];
@@ -46,6 +48,11 @@ public class Grid : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Finds all the neighboring nodes to the given node
+    /// </summary>
+    /// <param name="node">The given node</param>
+    /// <returns></returns>
     public List<Node> GetNeighbours(Node node)
     {
         List<Node> neighbours = new List<Node>();
@@ -70,7 +77,11 @@ public class Grid : MonoBehaviour
         return neighbours;
     }
 
-
+    /// <summary>
+    /// Takes in a vector3 reporesenting a position on the world and converts it to a node from the grid
+    /// </summary>
+    /// <param name="worldPosition">the given world position</param>
+    /// <returns></returns>
     public Node NodeFromWorldPoint(Vector3 worldPosition)
     {
         float percentX = (worldPosition.x - (float)6 + gridWorldSize.x / 2) / gridWorldSize.x;
@@ -83,6 +94,9 @@ public class Grid : MonoBehaviour
         return grid[x, y];
     }
 
+    /// <summary>
+    /// Draws paths
+    /// </summary>
     void OnDrawGizmos()
     {
 

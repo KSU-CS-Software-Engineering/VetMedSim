@@ -14,6 +14,13 @@ public class Node : IHeapItem<Node>
     public Node parent;
     int heapIndex;
 
+    /// <summary>
+    /// Constructor for the Nodes
+    /// </summary>
+    /// <param name="_walkable">If the node is able to be walked on or through</param>
+    /// <param name="_worldPos">The position of the node relative to the world (There is an offset)</param>
+    /// <param name="_gridX">x grid position</param>
+    /// <param name="_gridY">y grid position</param>
     public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY)
     {
         walkable = _walkable;
@@ -42,6 +49,11 @@ public class Node : IHeapItem<Node>
         }
     }
 
+    /// <summary>
+    /// Compares current node's f and g costs to another node
+    /// </summary>
+    /// <param name="nodeToCompare">the given node that is being compared to</param>
+    /// <returns></returns>
     public int CompareTo(Node nodeToCompare)
     {
         int compare = fCost.CompareTo(nodeToCompare.fCost);

@@ -15,7 +15,11 @@ public class Pathfinding : MonoBehaviour
         grid = GetComponent<Grid>();
     }
 
-
+    /// <summary>
+    /// Begins pathfinding
+    /// </summary>
+    /// <param name="startPos">Beginning of the path</param>
+    /// <param name="targetPos">Ending of the path</param>
     public void StartFindPath(Vector3 startPos, Vector3 targetPos)
     {
         StartCoroutine(FindPath(startPos, targetPos));
@@ -82,6 +86,12 @@ public class Pathfinding : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// retraces the path from ending to beginning while making waypoints along the way
+    /// </summary>
+    /// <param name="startNode">the beginning node of the path</param>
+    /// <param name="endNode">the ending node of the path</param>
+    /// <returns></returns>
     Vector3[] RetracePath(Node startNode, Node endNode)
     {
         List<Node> path = new List<Node>();
@@ -98,6 +108,11 @@ public class Pathfinding : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Simplifies the given path of nodes
+    /// </summary>
+    /// <param name="path">A list of nodes the represent the path</param>
+    /// <returns></returns>
     Vector3[] SimplifyPath(List<Node> path)
     {
         List<Vector3> waypoints = new List<Vector3>();
@@ -115,6 +130,12 @@ public class Pathfinding : MonoBehaviour
         return waypoints.ToArray();
     }
 
+    /// <summary>
+    /// Gets the distance between two given nodes
+    /// </summary>
+    /// <param name="nodeA">The first node</param>
+    /// <param name="nodeB">The second node</param>
+    /// <returns>Returns the distance</returns>
     int GetDistance(Node nodeA, Node nodeB)
     {
         int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);

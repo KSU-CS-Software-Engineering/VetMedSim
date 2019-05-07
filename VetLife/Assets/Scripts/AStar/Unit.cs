@@ -29,54 +29,28 @@ namespace Assets.Scripts.UserInput
             GestureHandler.RegisterListener(this);
         }
 
-        // private Camera cam;
-        // void Start()
-        // {
-        //     cam = Camera.main;
-        //     // PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
-        // }
 
         void Update()
         {
             
         }
-        // internal Vector2 Position => gameObject.transform.position;
 
         public void OnGestureStart(Gesture gesture)
         {
-            //PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
             switch (gesture.Type)
             {
                 case GestureType.Tap:
                     var origin = ( (Tap) gesture ).Origin;
                     var gestureLocation = Camera.main.ScreenToWorldPoint( origin );
-                    var locationFORREAL = new Vector3(gestureLocation.x, (float)0, gestureLocation.y);
+                    var locationOfTap = new Vector3(gestureLocation.x, (float)0, gestureLocation.y);
                     var transformPosition = new Vector3(transform.position.x, (float)0, transform.position.y);
-                    // RaycastHit2D hit = Physics2D.Raycast( gestureLocation, Vector2.zero );
-                    
-
-                    // Vector3 point = new Vector3();
-                    // Event currentEvent = Event.current;
-                    // Vector2 tapPos = new Vector2();
-
-                    // var origin = ((Tap)gesture).Origin;
-                    // // Get the mouse position from Event.
-                    // // Note that the y position from Event is inverted.
-                    // tapPos.x = origin.x;
-                    // tapPos.y = cam.pixelHeight - origin.y;
-
-                    // point = cam.ScreenToWorldPoint(new Vector3(tapPos.x, cam.nearClipPlane, tapPos.y));
-
-                    // //Vector3 targetLocation = new Vector3(origin.x, 0, origin.y);
-                    PathRequestManager.RequestPath(transformPosition, locationFORREAL, OnPathFound);
-                    Debug.Log(locationFORREAL.ToString());
+                    PathRequestManager.RequestPath(transformPosition, locationOfTap, OnPathFound);
                     break;
             }
         }
 
         public void OnGestureEnd(Gesture gesture)
         {
-            //PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
             // intentionally left blank
         }
 
