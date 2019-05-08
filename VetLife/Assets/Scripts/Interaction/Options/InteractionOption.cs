@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Interaction.Options
 {
@@ -15,11 +16,6 @@ namespace Assets.Scripts.Interaction.Options
 		/// </summary>
 		private OptionDialog _dialog;
 
-		/// <summary>
-		/// Function invoked when this option is selected
-		/// </summary>
-		private readonly Action _callback;
-
 		#endregion
 
 		#region Properties
@@ -27,22 +23,12 @@ namespace Assets.Scripts.Interaction.Options
 		/// <summary>
 		/// Name of the option
 		/// </summary>
-		public string Name { get; private set; }
-
-		#endregion
-
-		#region Constructors
+		public string Name;
 
 		/// <summary>
-		/// Constructs base interaction option
+		/// Function invoked when this option is selected
 		/// </summary>
-		/// <param name="name">Name of the option</param>
-		/// <param name="callbackFunction">Function invoked when this option is selected</param>
-		protected InteractionOption( string name, Action callbackFunction )
-		{
-			Name = name;
-			_callback = callbackFunction;
-		}
+		public UnityEvent Callback;
 
 		#endregion
 
@@ -70,7 +56,7 @@ namespace Assets.Scripts.Interaction.Options
 		/// </summary>
 		public void OnSelected()
 		{
-			_callback.Invoke();
+			Callback.Invoke();
 		}
 
 		/// <summary>

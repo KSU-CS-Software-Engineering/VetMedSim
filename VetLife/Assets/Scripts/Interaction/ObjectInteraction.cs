@@ -11,27 +11,25 @@ namespace Assets.Scripts.Interaction
     {
         #region Fields
         private OptionDialog _optionDialog;
-
-        private List<InteractionOption> _options = new List<InteractionOption>();
         #endregion
 
         #region Properties
         public GameObject Dialog;
         public GestureHandler GestureHandler;
         public GameObject ContentPanel;
+        public List<InteractionOption> Options = new List<InteractionOption>();
         #endregion
 
         #region Overrides
         void Awake()
         {
-            Dialog.SetActive( false );
             GestureHandler.RegisterListener( this );
             _optionDialog = ContentPanel.GetComponent<OptionDialog>();
 
             InteractionOption[] optionsArray = GetComponentsInChildren<InteractionOption>();
             foreach( InteractionOption option in optionsArray )
             {
-                _options.Add( option );
+                Options.Add( option );
             }
         }
 
@@ -47,11 +45,11 @@ namespace Assets.Scripts.Interaction
                     Vector2 origin = ( ( Tap ) gesture ).Origin;
                     Vector3 gestureLocation = Camera.main.ScreenToWorldPoint( origin );
                     RaycastHit2D hit = Physics2D.Raycast( gestureLocation, Vector2.zero );
-                    if( hit.collider.gameObject == gameObject )
+                    if( hit.collider != null && hit.collider.gameObject == gameObject )
                     {
-                        Dialog.SetActive( true );
+                        _optionDialog.Show();
                         _optionDialog.ClearOptions();
-                        foreach( InteractionOption option in _options )
+                        foreach( InteractionOption option in Options )
                         {
                             _optionDialog.AddOption( option );
                         }
