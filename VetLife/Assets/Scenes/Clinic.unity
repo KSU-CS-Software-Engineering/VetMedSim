@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 195784747}
   - component: {fileID: 195784748}
   - component: {fileID: 195784749}
+  - component: {fileID: 195784750}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1132,6 +1133,18 @@ MonoBehaviour:
   ContentPanel: {fileID: 195784746}
   InteractionDialog: {fileID: 1752171074}
   OptionButtonPool: {fileID: 1366246808}
+--- !u!114 &195784750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195784745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f569cc809fad19449b4ae94c4132528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &200024518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4332054102008224, guid: 9498899558df9ba49a033c352e334a55,
@@ -33592,6 +33605,7 @@ GameObject:
   - component: {fileID: 3438007444819243583}
   - component: {fileID: 7125076940127757676}
   - component: {fileID: 4760291806991187620}
+  - component: {fileID: 8879720397653240641}
   m_Layer: 5
   m_Name: Nail Clipping Canvas
   m_TagString: Untagged
@@ -33599,6 +33613,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &8879720397653240641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879720397653240640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f569cc809fad19449b4ae94c4132528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &9207738439807937950
 RectTransform:
   m_ObjectHideFlags: 0

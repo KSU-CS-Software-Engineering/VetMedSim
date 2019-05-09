@@ -208,6 +208,11 @@ namespace Assets.Scripts.Player
 		/// </summary>
 		private float _collisionTimer;
 
+		/// <summary>
+		/// Flag to set to disable transitioning to walking state
+		/// </summary>
+		private bool _walkingAllowed = true;
+
 		#endregion
 
 		#region Properties
@@ -289,6 +294,19 @@ namespace Assets.Scripts.Player
 			State.OnUpdate();
 		}
 
+		/// <summary>
+		/// Allows/disallows transition to the walking state
+		/// </summary>
+		/// <param name="flag">Whether to allow walking or not</param>
+		public void AllowWalking( bool flag )
+		{
+			_walkingAllowed = flag;
+			if( flag == false && State.GetType() == typeof( WalkingState ) )
+			{
+				ChangeState( new IdleState( this ) );
+			}
+		}
+
 		#endregion
 
 		#region IGestureListener
@@ -301,7 +319,10 @@ namespace Assets.Scripts.Player
 					var origin = ((Tap) gesture).Origin;
 					var destination = Camera.main.ScreenToWorldPoint( origin );
 
-					ChangeState( new WalkingState( this, destination ) );
+					if( _walkingAllowed )
+					{
+						ChangeState( new WalkingState( this, destination ) );
+					}
 					break;
 			}
 		}
